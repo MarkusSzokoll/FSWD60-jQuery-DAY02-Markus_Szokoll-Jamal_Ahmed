@@ -1,12 +1,18 @@
 $(document).ready(function(){
-       $("img").on('click', function(eventObject)){
-      var senta="you cliked santa claus";
-      var christ="you cliked chrismas";
-      var bell="you cliked Chrismas bell";
-       var eventType = eventObject.type; 
-      document.getElementById('msg').innerHTML = "The event type is " + eventType + christ;
+     $("img").on('click', function(){
+     	if(this.id==0){
+		     document.getElementById('msg').innerHTML = "You clicked gift";
+ 		     }
+	     else if(this.id==1){
+			document.getElementById('msg').innerHTML = "You clicked santa";
+	     }
+	     else{
+	     	document.getElementById('msg').innerHTML = "You clicked the bell";
+	     }
+	     
 
-       }
 
+	      
 
     });
+});
